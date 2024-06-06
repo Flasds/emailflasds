@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>电子邮件介绍网站</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    display: flex;
+  }
+  .sidebar {
+    width: 25%;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  .main-content {
+    width: 75%;
+    padding: 20px;
+  }
+  .content {
+    display: none;
+  }
+  .content.active {
+    display: block;
+  }
+  h2 {
+    margin-top: 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- 左侧侧边栏 -->
+  <div class="sidebar">
+    <h2>&nbsp;</h2>
+    <ul>
+      <li><a href="#" onclick="showContent('history')">电子邮件的历史</a></li>
+      <li><a href="#" onclick="showContent('features')">电子邮件的特点</a></li>
+      <li><a href="#" onclick="showContent('principle')">电子邮件的原理</a></li>
+      <li><a href="#" onclick="showContent('usage')">电子邮件的作用</a></li>
+      <li><a href="#" onclick="showContent('system')">电子邮件系统</a></li>
+    </ul>
+  </div>
+  
+  <!-- 右侧显示栏 -->
+  <div class="main-content">
+    <div class="content" id="history">
+      <h2>电子邮件的历史</h2>
+      <p>电子邮件的起源可以追溯到20世纪60年代末，当时美国国防部的ARPA（高级研究计划署）在建立ARPANET时首次使用电子邮件进行网络通信。随着互联网的发展，电子邮件逐渐普及开来，成为人们重要的沟通工具。</p>
+    </div>
+    <div class="content" id="features">
+      <h2>电子邮件的特点</h2>
+      <p>电子邮件作为一种通信工具具有许多特点，包括即时性，您可以在几秒钟内发送和接收邮件；便捷性，可以通过任何联网设备发送和接收邮件；全球性，可以与世界各地的人进行交流。</p>
+    </div>
+    <div class="content" id="principle">
+      <h2>电子邮件的原理</h2>
+      <p>电子邮件的基本工作原理是通过电子邮件服务器进行发送、接收和存储邮件。发送邮件时，邮件客户端通过SMTP（简单邮件传输协议）将邮件发送到邮件服务器，收件人通过POP3（邮局协议3）或IMAP（互联网消息访问协议）从邮件服务器接收邮件。</p>
+    </div>
+    <div class="content" id="usage">
+      <h2>电子邮件的作用</h2>
+      <p>电子邮件在个人生活和商业领域中发挥着重要作用。在个人生活中，电子邮件用于与家人、朋友保持联系；在商业领域中，电子邮件被广泛应用于沟通、营销、客户服务等方面，提高了工作效率。</p>
+    </div>
+    <div class="content" id="system">
+      <h2>电子邮件系统</h2>
+      <p>电子邮件系统由多个组成部分构成，包括邮件服务器、SMTP（简单邮件传输协议）、POP3（邮局协议3）、IMAP（互联网消息访问协议）等协议，以及各种邮件客户端软件。</p>
+    </div>
+    <img src="img/a6f0b45d1c906e0ed19eb24334e03569.jpeg" width="497" height="383"></div>
+</div>
+
+<script>
+function showContent(id) {
+  // 隐藏所有内容
+  var contents = document.getElementsByClassName('content');
+  for (var i = 0; i < contents.length; i++) {
+    contents[i].classList.remove('active');
+  }
+  
+  // 显示点击的内容
+  var content = document.getElementById(id);
+  if (content) {
+    content.classList.add('active');
+  }
+}
+</script>
+
+</body>
+</html>
